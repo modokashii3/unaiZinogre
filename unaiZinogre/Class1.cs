@@ -24,7 +24,7 @@ namespace unaiZinogre
         private int _previousAction;
         private int _frameCounter;
 
-        private bool _modEnabled = true;
+        private bool _modEnabled = false;
         private string _statusMessage = "";
         private int _frameCountdown = 0;
         private const int _framesForMessage = 60;
@@ -461,9 +461,9 @@ namespace unaiZinogre
                     }
                     else if (_timerElapsed == 7)
                     {
-                        _targetPositionC -= _zinoOne.Position; // player - zino = distance which is now C, used as distance unit
-                        _targetPositionC /= 2; //half C
-                        _targetPositionA -= _targetPositionC; // A is now midpoint between player(originalA) and zino
+                        _targetPositionC -= _zinoOne.Position; 
+                        _targetPositionC /= 2; 
+                        _targetPositionA -= _targetPositionC; 
 
                         if (_chargeState)
                         {
